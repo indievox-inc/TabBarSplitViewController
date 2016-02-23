@@ -10,6 +10,8 @@
 		EA9F0E541C7C3A1E00DB20B1 /* TabBarSplitViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9F0E531C7C3A1E00DB20B1 /* TabBarSplitViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA9F0E5B1C7C3A1E00DB20B1 /* TabBarSplitViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9F0E501C7C3A1E00DB20B1 /* TabBarSplitViewController.framework */; };
 		EA9F0E601C7C3A1E00DB20B1 /* TabBarSplitViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0E5F1C7C3A1E00DB20B1 /* TabBarSplitViewControllerTests.swift */; };
+		EA9F0E6B1C7C44C200DB20B1 /* TabBarSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0E6A1C7C44C200DB20B1 /* TabBarSplitViewController.swift */; };
+		EA9F0E6C1C7C44C200DB20B1 /* TabBarSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9F0E6A1C7C44C200DB20B1 /* TabBarSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		EA9F0E5A1C7C3A1E00DB20B1 /* TabBarSplitViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarSplitViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9F0E5F1C7C3A1E00DB20B1 /* TabBarSplitViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSplitViewControllerTests.swift; sourceTree = "<group>"; };
 		EA9F0E611C7C3A1E00DB20B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA9F0E6A1C7C44C200DB20B1 /* TabBarSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9F0E531C7C3A1E00DB20B1 /* TabBarSplitViewController.h */,
+				EA9F0E6A1C7C44C200DB20B1 /* TabBarSplitViewController.swift */,
 				EA9F0E551C7C3A1E00DB20B1 /* Info.plist */,
 			);
 			path = TabBarSplitViewController;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9F0E6B1C7C44C200DB20B1 /* TabBarSplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9F0E601C7C3A1E00DB20B1 /* TabBarSplitViewControllerTests.swift in Sources */,
+				EA9F0E6C1C7C44C200DB20B1 /* TabBarSplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,28 +314,33 @@
 		EA9F0E651C7C3A1E00DB20B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TabBarSplitViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indievox.TabBarSplitViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EA9F0E661C7C3A1E00DB20B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TabBarSplitViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indievox.TabBarSplitViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,6 +387,7 @@
 				EA9F0E661C7C3A1E00DB20B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA9F0E671C7C3A1E00DB20B1 /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +396,7 @@
 				EA9F0E691C7C3A1E00DB20B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
