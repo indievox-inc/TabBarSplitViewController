@@ -89,7 +89,7 @@ class ViewController: UIViewController {
 class EmptyDetailViewController : UIViewController {
     override func loadView() {
         let view = UIView()
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.darkGrayColor()
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
