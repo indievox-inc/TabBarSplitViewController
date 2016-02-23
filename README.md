@@ -2,7 +2,7 @@
 
 Adaptive UISplitViewController with UITabBarController as primary view controller.
 
-![TabBarSplitViewController Example screenshot in iPhone 6 Plus simulator](https://cloud.githubusercontent.com/assets/2727287/13248853/b94e38f2-da5b-11e5-8c21-c293dc37a73f.png)
+![TabBarSplitViewController Example screenshot in iPhone 6 Plus simulator](https://cloud.githubusercontent.com/assets/2727287/13249103/3bc6a4ee-da5d-11e5-8d41-567a0946e29e.PNG)
 
 (Not what you're looking for? You may like another UI structure: [daveanderson/TabsAndSplits](https://github.com/daveanderson/TabsAndSplits))
 
