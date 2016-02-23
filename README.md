@@ -10,10 +10,11 @@ If you're using UITabBarController as rootViewController to build an iPhone-only
 
 This project powers LiVE EVIL app of iNDIEVOX Inc., and will be maintained with the latest Swift and Xcode version. 
 
+Fully compatible with iOS 9 iPad multitasking (Slide Over/Split View).
+
 ## Requirements 
 
 iOS 8 or later. 
-Fully compatible with iOS 9 iPad multitasking (Slide Over/Split View).
 
 ## Add to Your Project
 
@@ -27,12 +28,12 @@ Just drag TabBarSplitViewController.swift into your project.
 
 ## How to Use
 
-Init TabBarSplitViewController and set as rootViewController. See example.
+Init TabBarSplitViewController and set as rootViewController. See [Example](https://github.com/indievox-inc/TabBarSplitViewController/tree/master/Example/TabBarSplitViewControllerDemo).
 
 In primary view controller, showViewController/showDetailViewController are preferred rather than the old pushViewController. 
 
-See [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](https://developer.apple.com/videos/play/wwdc2014-216) for implementation details.
+See [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](https://developer.apple.com/videos/play/wwdc2014-216) for knowledge of implementation details.
 
 ## Licenses
 
-All source code is licensed under the MIT License. See LICENSE.
+All source code is licensed under the MIT License. See [LICENSE](https://github.com/indievox-inc/TabBarSplitViewController/blob/master/LICENSE).
