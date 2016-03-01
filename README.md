@@ -36,6 +36,14 @@ github "indievox-inc/TabBarSplitViewController"
 
 Follow instructions on [Carthage](https://github.com/Carthage/Carthage).
 
+### Git Submodule
+
+Add as submodule and clone:
+```
+git submodule add https://github.com/indievox-inc/TabBarSplitViewController
+```
+Then manually add to your project, as follows:
+
 ### Manually
 
 #### Dependency Project
@@ -49,9 +57,9 @@ Or just drag TabBarSplitViewController.swift into your project.
 
 ## How to Use
 
-### Import TabBarSplitViewController
+Init TabBarSplitViewController and set it as windows's rootViewController.
 
-Init TabBarSplitViewController and set as windows's rootViewController. 
+### Import TabBarSplitViewController Framework
 
 For Swift projects, `import TabBarSplitViewController` before using it. See [Example](https://github.com/indievox-inc/TabBarSplitViewController/tree/master/Example/TabBarSplitViewControllerDemo).
 
