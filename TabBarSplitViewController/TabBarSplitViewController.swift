@@ -27,6 +27,11 @@ public class TabBarSplitViewController: UISplitViewController {
         delegate = self
     }
 
+    /// Bridging for Objective-C
+    public convenience init(tabBarViewControllers: [UIViewController], detailClassGeneral: UIViewController.Type, detailClassEmpty: UIViewController.Type) {
+        self.init(tabBarViewControllers: tabBarViewControllers, detailViewControllerType: (detailClassGeneral, detailClassEmpty))
+    }
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
