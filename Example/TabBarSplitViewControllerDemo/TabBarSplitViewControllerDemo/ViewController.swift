@@ -67,19 +67,19 @@ class ViewController: UIViewController {
 
     // MARK: Actions
 
-    func showRed(sender: AnyObject) {
+    func showRed(sender: UIButton) {
         let vc = UIViewController()
         vc.view.backgroundColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: 1.0)
         showViewController(vc, sender: self)
     }
 
-    func showBlue(sender: AnyObject) {
+    func showBlue(sender: UIButton) {
         let vc = UIViewController()
         vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.5)
         showDetailViewController(vc, sender: self)
     }
 
-    func showGreen(sender: AnyObject) {
+    func showGreen(sender: UIButton) {
         let vc = UIViewController()
         vc.view.backgroundColor = UIColor(red: 0, green: 1.0, blue: 0, alpha: 0.5)
         showDetailViewController(vc, sender: self)
@@ -99,9 +99,9 @@ class EmptyDetailViewController : UIViewController {
         view.addSubview(label)
         
         let xConstraint = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: view,
-            attribute: .CenterX, multiplier: 1, constant: 0)
+            attribute: .CenterX, multiplier: 1.0, constant: 0)
         let yConstraint = NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: view,
-            attribute: .CenterY, multiplier: 1, constant: 0)
+            attribute: .CenterY, multiplier: 1.0, constant: 0)
         NSLayoutConstraint.activateConstraints([xConstraint, yConstraint])
         
         self.view = view

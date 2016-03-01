@@ -41,7 +41,7 @@ Follow instructions on [Carthage](https://github.com/Carthage/Carthage).
 #### Dependency Project
 
 1. Drag TabBarSplitViewController.xcodeproj into your project.
-2. Project - Targets - General setttings - Embedded Binaries: add TabBarSplitViewController.frameworkiOS
+2. Project settings - Targets - General - Embedded Binaries: add TabBarSplitViewController.frameworkiOS
 
 #### Source Code
 
@@ -49,13 +49,21 @@ Or just drag TabBarSplitViewController.swift into your project.
 
 ## How to Use
 
-Init TabBarSplitViewController and set as windows's rootViewController. See [Example](https://github.com/indievox-inc/TabBarSplitViewController/tree/master/Example/TabBarSplitViewControllerDemo).
+### Import TabBarSplitViewController
+
+Init TabBarSplitViewController and set as windows's rootViewController. 
+
+For Swift projects, `import TabBarSplitViewController` before using it. See [Example](https://github.com/indievox-inc/TabBarSplitViewController/tree/master/Example/TabBarSplitViewControllerDemo).
+
+For Objective-C projects, `#import "TabBarSplitViewController/TabBarSplitViewController-Swift.h"` before using it, and change project settings - Targets - Build Settings - `Embedded Content Contains Swift Code` to `YES`. See [Example-ObjC](https://github.com/indievox-inc/TabBarSplitViewController/tree/master/Example/TabBarSplitViewControllerDemo-ObjC)(`carthage update` before running it).
+
+### Showing View Controllers
 
 In primary view controller, `showViewController`(push to primary) / `showDetailViewController`(push to secondary) are preferred rather than the old `pushViewController`. 
 
 All view controllers of the tabBarViewController should be UINavigationController, with respective view controller of each tab as its rootViewController.
 
-Further reading: [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](https://developer.apple.com/videos/play/wwdc2014-216) for knowledge of implementation details.
+Further reading: [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](https://developer.apple.com/videos/play/wwdc2014/216) for knowledge of implementation details.
 
 ## Afterword
 

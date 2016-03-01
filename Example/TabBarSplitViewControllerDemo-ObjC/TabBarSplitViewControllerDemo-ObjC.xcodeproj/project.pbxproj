@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA40E9791C85684C00C9FCBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40E9781C85684C00C9FCBE /* main.m */; };
+		EA40E97C1C85684C00C9FCBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40E97B1C85684C00C9FCBE /* AppDelegate.m */; };
+		EA40E97F1C85684C00C9FCBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40E97E1C85684C00C9FCBE /* ViewController.m */; };
+		EA40E9841C85684C00C9FCBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA40E9831C85684C00C9FCBE /* Assets.xcassets */; };
+		EA40E9871C85684C00C9FCBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA40E9851C85684C00C9FCBE /* LaunchScreen.storyboard */; };
+		EA40E9921C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40E9911C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCTests.m */; };
+		EA40E99D1C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40E99C1C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCUITests.m */; };
+		EA40E9D11C856D1600C9FCBE /* TabBarSplitViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA40E9D01C856D1600C9FCBE /* TabBarSplitViewController.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA40E98E1C85684C00C9FCBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA40E96C1C85684C00C9FCBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA40E9731C85684C00C9FCBE;
+			remoteInfo = "TabBarSplitViewControllerDemo-ObjC";
+		};
+		EA40E9991C85684C00C9FCBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA40E96C1C85684C00C9FCBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA40E9731C85684C00C9FCBE;
+			remoteInfo = "TabBarSplitViewControllerDemo-ObjC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA40E9741C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBarSplitViewControllerDemo-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA40E9781C85684C00C9FCBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA40E97A1C85684C00C9FCBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA40E97B1C85684C00C9FCBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA40E97D1C85684C00C9FCBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA40E97E1C85684C00C9FCBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA40E9831C85684C00C9FCBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA40E9861C85684C00C9FCBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA40E9881C85684C00C9FCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA40E98D1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TabBarSplitViewControllerDemo-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA40E9911C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarSplitViewControllerDemo_ObjCTests.m; sourceTree = "<group>"; };
+		EA40E9931C85684C00C9FCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA40E9981C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TabBarSplitViewControllerDemo-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA40E99C1C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarSplitViewControllerDemo_ObjCUITests.m; sourceTree = "<group>"; };
+		EA40E99E1C85684C00C9FCBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA40E9D01C856D1600C9FCBE /* TabBarSplitViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TabBarSplitViewController.framework; path = Carthage/Build/iOS/TabBarSplitViewController.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA40E9711C85684C00C9FCBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA40E9D11C856D1600C9FCBE /* TabBarSplitViewController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E98A1C85684C00C9FCBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E9951C85684C00C9FCBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA40E96B1C85684C00C9FCBE = {
+			isa = PBXGroup;
+			children = (
+				EA40E9D01C856D1600C9FCBE /* TabBarSplitViewController.framework */,
+				EA40E9761C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */,
+				EA40E9901C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests */,
+				EA40E99B1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests */,
+				EA40E9751C85684C00C9FCBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA40E9751C85684C00C9FCBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA40E9741C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC.app */,
+				EA40E98D1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests.xctest */,
+				EA40E9981C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA40E9761C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				EA40E97A1C85684C00C9FCBE /* AppDelegate.h */,
+				EA40E97B1C85684C00C9FCBE /* AppDelegate.m */,
+				EA40E97D1C85684C00C9FCBE /* ViewController.h */,
+				EA40E97E1C85684C00C9FCBE /* ViewController.m */,
+				EA40E9831C85684C00C9FCBE /* Assets.xcassets */,
+				EA40E9851C85684C00C9FCBE /* LaunchScreen.storyboard */,
+				EA40E9881C85684C00C9FCBE /* Info.plist */,
+				EA40E9771C85684C00C9FCBE /* Supporting Files */,
+			);
+			path = "TabBarSplitViewControllerDemo-ObjC";
+			sourceTree = "<group>";
+		};
+		EA40E9771C85684C00C9FCBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA40E9781C85684C00C9FCBE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA40E9901C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA40E9911C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCTests.m */,
+				EA40E9931C85684C00C9FCBE /* Info.plist */,
+			);
+			path = "TabBarSplitViewControllerDemo-ObjCTests";
+			sourceTree = "<group>";
+		};
+		EA40E99B1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA40E99C1C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCUITests.m */,
+				EA40E99E1C85684C00C9FCBE /* Info.plist */,
+			);
+			path = "TabBarSplitViewControllerDemo-ObjCUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA40E9731C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA40E9A11C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjC" */;
+			buildPhases = (
+				EA40E9701C85684C00C9FCBE /* Sources */,
+				EA40E9711C85684C00C9FCBE /* Frameworks */,
+				EA40E9721C85684C00C9FCBE /* Resources */,
+				EA40E9CF1C856CF700C9FCBE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TabBarSplitViewControllerDemo-ObjC";
+			productName = "TabBarSplitViewControllerDemo-ObjC";
+			productReference = EA40E9741C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA40E98C1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA40E9A41C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjCTests" */;
+			buildPhases = (
+				EA40E9891C85684C00C9FCBE /* Sources */,
+				EA40E98A1C85684C00C9FCBE /* Frameworks */,
+				EA40E98B1C85684C00C9FCBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA40E98F1C85684C00C9FCBE /* PBXTargetDependency */,
+			);
+			name = "TabBarSplitViewControllerDemo-ObjCTests";
+			productName = "TabBarSplitViewControllerDemo-ObjCTests";
+			productReference = EA40E98D1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA40E9971C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA40E9A71C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjCUITests" */;
+			buildPhases = (
+				EA40E9941C85684C00C9FCBE /* Sources */,
+				EA40E9951C85684C00C9FCBE /* Frameworks */,
+				EA40E9961C85684C00C9FCBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA40E99A1C85684C00C9FCBE /* PBXTargetDependency */,
+			);
+			name = "TabBarSplitViewControllerDemo-ObjCUITests";
+			productName = "TabBarSplitViewControllerDemo-ObjCUITests";
+			productReference = EA40E9981C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA40E96C1C85684C00C9FCBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = iNDIEVOX;
+				TargetAttributes = {
+					EA40E9731C85684C00C9FCBE = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					EA40E98C1C85684C00C9FCBE = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EA40E9731C85684C00C9FCBE;
+					};
+					EA40E9971C85684C00C9FCBE = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = EA40E9731C85684C00C9FCBE;
+					};
+				};
+			};
+			buildConfigurationList = EA40E96F1C85684C00C9FCBE /* Build configuration list for PBXProject "TabBarSplitViewControllerDemo-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA40E96B1C85684C00C9FCBE;
+			productRefGroup = EA40E9751C85684C00C9FCBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA40E9731C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */,
+				EA40E98C1C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCTests */,
+				EA40E9971C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA40E9721C85684C00C9FCBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA40E9871C85684C00C9FCBE /* LaunchScreen.storyboard in Resources */,
+				EA40E9841C85684C00C9FCBE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E98B1C85684C00C9FCBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E9961C85684C00C9FCBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA40E9CF1C856CF700C9FCBE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/TabBarSplitViewController.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA40E9701C85684C00C9FCBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA40E97F1C85684C00C9FCBE /* ViewController.m in Sources */,
+				EA40E97C1C85684C00C9FCBE /* AppDelegate.m in Sources */,
+				EA40E9791C85684C00C9FCBE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E9891C85684C00C9FCBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA40E9921C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA40E9941C85684C00C9FCBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA40E99D1C85684C00C9FCBE /* TabBarSplitViewControllerDemo_ObjCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA40E98F1C85684C00C9FCBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA40E9731C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */;
+			targetProxy = EA40E98E1C85684C00C9FCBE /* PBXContainerItemProxy */;
+		};
+		EA40E99A1C85684C00C9FCBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA40E9731C85684C00C9FCBE /* TabBarSplitViewControllerDemo-ObjC */;
+			targetProxy = EA40E9991C85684C00C9FCBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA40E9851C85684C00C9FCBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA40E9861C85684C00C9FCBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA40E99F1C85684C00C9FCBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA40E9A01C85684C00C9FCBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA40E9A21C85684C00C9FCBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA40E9A31C85684C00C9FCBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA40E9A51C85684C00C9FCBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarSplitViewControllerDemo-ObjC.app/TabBarSplitViewControllerDemo-ObjC";
+			};
+			name = Debug;
+		};
+		EA40E9A61C85684C00C9FCBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabBarSplitViewControllerDemo-ObjC.app/TabBarSplitViewControllerDemo-ObjC";
+			};
+			name = Release;
+		};
+		EA40E9A81C85684C00C9FCBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TabBarSplitViewControllerDemo-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EA40E9A91C85684C00C9FCBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TabBarSplitViewControllerDemo-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA40E96F1C85684C00C9FCBE /* Build configuration list for PBXProject "TabBarSplitViewControllerDemo-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA40E99F1C85684C00C9FCBE /* Debug */,
+				EA40E9A01C85684C00C9FCBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA40E9A11C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA40E9A21C85684C00C9FCBE /* Debug */,
+				EA40E9A31C85684C00C9FCBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA40E9A41C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA40E9A51C85684C00C9FCBE /* Debug */,
+				EA40E9A61C85684C00C9FCBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA40E9A71C85684C00C9FCBE /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-ObjCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA40E9A81C85684C00C9FCBE /* Debug */,
+				EA40E9A91C85684C00C9FCBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA40E96C1C85684C00C9FCBE /* Project object */;
+}
