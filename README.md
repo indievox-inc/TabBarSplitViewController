@@ -29,9 +29,23 @@ iOS 8 or later.
 
 ### Carthage
 
+#### Cartfile
+```
+github "indievox-inc/TabBarSplitViewController"
+```
+
+Follow instructions on [Carthage](https://github.com/Carthage/Carthage).
+
 ### Manually
 
-Just drag TabBarSplitViewController.swift into your project.
+#### Dependency Project
+
+1. Drag TabBarSplitViewController.xcodeproj into your project.
+2. Project - Targets - General setttings - Embedded Binaries: add TabBarSplitViewController.frameworkiOS
+
+#### Source Code
+
+Or just drag TabBarSplitViewController.swift into your project.
 
 ## How to Use
 

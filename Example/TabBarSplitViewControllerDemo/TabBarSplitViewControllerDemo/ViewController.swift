@@ -69,19 +69,19 @@ class ViewController: UIViewController {
 
     func showRed(sender: AnyObject) {
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.redColor()
+        vc.view.backgroundColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: 1.0)
         showViewController(vc, sender: self)
     }
 
     func showBlue(sender: AnyObject) {
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.blueColor()
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.5)
         showDetailViewController(vc, sender: self)
     }
 
     func showGreen(sender: AnyObject) {
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.greenColor()
+        vc.view.backgroundColor = UIColor(red: 0, green: 1.0, blue: 0, alpha: 0.5)
         showDetailViewController(vc, sender: self)
     }
 }

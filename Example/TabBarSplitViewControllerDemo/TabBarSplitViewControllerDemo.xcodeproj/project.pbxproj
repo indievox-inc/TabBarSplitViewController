@@ -83,7 +83,6 @@
 		EA9F0EDB1C7C46CF00DB20B1 /* TabBarSplitViewControllerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSplitViewControllerDemoUITests.swift; sourceTree = "<group>"; };
 		EA9F0EDD1C7C46CF00DB20B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9F0EEA1C7C488D00DB20B1 /* TabBarSplitViewController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TabBarSplitViewController.xcodeproj; path = ../../TabBarSplitViewController.xcodeproj; sourceTree = "<group>"; };
-		EA9F0EF31C7C48BE00DB20B1 /* TabBarSplitViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TabBarSplitViewController.framework; path = "../../build/Debug-iphoneos/TabBarSplitViewController.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +118,6 @@
 				EA9F0ECF1C7C46CF00DB20B1 /* TabBarSplitViewControllerDemoTests */,
 				EA9F0EDA1C7C46CF00DB20B1 /* TabBarSplitViewControllerDemoUITests */,
 				EA9F0EEA1C7C488D00DB20B1 /* TabBarSplitViewController.xcodeproj */,
-				EA9F0EF31C7C48BE00DB20B1 /* TabBarSplitViewController.framework */,
 				EA9F0EB91C7C46CF00DB20B1 /* Products */,
 			);
 			sourceTree = "<group>";
