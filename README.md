@@ -79,10 +79,9 @@ This project powers LiVE EVIL app of iNDIEVOX Inc., and is planned to be maintai
 
 If you prefer Objective-C to avoid dependency hell of fast-moving Swift version(See: [Is It Time for Swift?](https://realm.io/news/ben-sandofsky-time-for-swift)), or if you're using customized view for tab bar, port the source code and build your own should be easy now.
 
-There are some UI logic flaws in this UI structure, though not big concerns:
+There are one UI logic flaw in this UI structure, though not a big concern:
 
-1. `showViewController` in compact size class, and then changed to regular size class will expand the view controller to secondary. Now the same view controller can be `showViewController` again inside primary.
-2. `showDetailViewController` of view controller inside tab #1 in regular size class, tap tab #2, and then changed to compact size class will collapse the secondary and push the view controller of tab #1 onto tab #2.
+* `showDetailViewController` of view controller inside tab #1 in regular size class, tap tab #2, and then changed to compact size class will collapse the secondary and push the view controller of tab #1 onto tab #2.
 
 ## Licenses
 

@@ -79,19 +79,19 @@
 
 - (void)showRed:(UIButton*)sender {
     UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:1.0 green:0 blue:0 alpha:1.0];
+    vc.view.backgroundColor = [UIColor colorWithRed:0.8 green:0 blue:0 alpha:1.0];
     [self showViewController:vc sender:self];
 }
 
 - (void)showBlue:(UIButton*)sender {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1.0 alpha:0.5];
+    UIViewController *vc = [[DetailViewController alloc] init];
+    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.8 alpha:1.0];
     [self showDetailViewController:vc sender:self];
 }
 
 - (void)showGreen:(UIButton*)sender {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:1.0 blue:0 alpha:0.5];
+    UIViewController *vc = [[DetailViewController alloc] init];
+    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0.8 blue:0 alpha:1.0];
     [self showDetailViewController:vc sender:self];
 }
 
@@ -117,5 +117,9 @@
 
     self.view = view;
 }
+
+@end
+
+@implementation DetailViewController
 
 @end

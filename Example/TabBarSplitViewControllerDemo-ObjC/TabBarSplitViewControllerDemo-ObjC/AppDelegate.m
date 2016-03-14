@@ -32,7 +32,7 @@
     UIViewController *vc3 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     vc3.tabBarItem = tab3;
 
-    TabBarSplitViewController *tabBarSplitViewController = [[TabBarSplitViewController alloc] initWithTabBarViewControllers:@[vc1, vc2, vc3] detailClassGeneral:[UIViewController class] detailClassEmpty:[EmptyDetailViewController class]];
+    TabBarSplitViewController *tabBarSplitViewController = [[TabBarSplitViewController alloc] initWithTabBarViewControllers:@[vc1, vc2, vc3] detailClassGeneral:[DetailViewController class] detailClassEmpty:[EmptyDetailViewController class]];
     
     // setting up UIWindow
     if SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0"){

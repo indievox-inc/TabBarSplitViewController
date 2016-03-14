@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc3.tabBarItem = tab3
 
         let tabBarSplitViewController = TabBarSplitViewController(tabBarViewControllers: [vc1, vc2, vc3],
-            detailViewControllerType: (UIViewController.self, EmptyDetailViewController.self))
+            detailViewControllerType: (DetailViewController.self, EmptyDetailViewController.self))
 
         // setting up UIWindow
         let window : UIWindow

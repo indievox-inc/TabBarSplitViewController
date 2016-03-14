@@ -14,3 +14,5 @@
 @interface EmptyDetailViewController : UIViewController
 @end
 
+@interface DetailViewController : UIViewController
+@end

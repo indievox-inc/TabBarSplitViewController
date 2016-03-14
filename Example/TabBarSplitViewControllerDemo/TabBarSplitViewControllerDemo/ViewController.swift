@@ -69,19 +69,19 @@ class ViewController: UIViewController {
 
     func showRed(sender: UIButton) {
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor(red: 1.0, green: 0, blue: 0, alpha: 1.0)
+        vc.view.backgroundColor = UIColor(red: 0.8, green: 0, blue: 0, alpha: 1.0)
         showViewController(vc, sender: self)
     }
 
     func showBlue(sender: UIButton) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 1.0, alpha: 0.5)
+        let vc = DetailViewController()
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0.8, alpha: 1.0)
         showDetailViewController(vc, sender: self)
     }
 
     func showGreen(sender: UIButton) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor(red: 0, green: 1.0, blue: 0, alpha: 0.5)
+        let vc = DetailViewController()
+        vc.view.backgroundColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1.0)
         showDetailViewController(vc, sender: self)
     }
 }
@@ -108,3 +108,5 @@ class EmptyDetailViewController : UIViewController {
     }
 }
 
+class DetailViewController : UIViewController {
+}
