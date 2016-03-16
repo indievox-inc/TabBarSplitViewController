@@ -22,17 +22,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    UITabBarItem *tab1 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:0];
-    UIViewController *vc1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    BOOL secondaryWithNav = NO;
+
+    UITabBarItem *tab1 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
+    UIViewController *vc1 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithSecondaryWithNav:secondaryWithNav]];
     vc1.tabBarItem = tab1;
-    UITabBarItem *tab2 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:1];
-    UIViewController *vc2 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    UITabBarItem *tab2 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemSearch tag:2];
+    UIViewController *vc2 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithSecondaryWithNav:secondaryWithNav]];
     vc2.tabBarItem = tab2;
-    UITabBarItem *tab3 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:2];
-    UIViewController *vc3 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    UITabBarItem *tab3 = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:3];
+    UIViewController *vc3 = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithSecondaryWithNav:secondaryWithNav]];
     vc3.tabBarItem = tab3;
 
-    TabBarSplitViewController *tabBarSplitViewController = [[TabBarSplitViewController alloc] initWithTabBarViewControllers:@[vc1, vc2, vc3] detailClassGeneral:[DetailViewController class] detailClassEmpty:[EmptyDetailViewController class]];
+    TabBarSplitViewController *tabBarSplitViewController = [[TabBarSplitViewController alloc] initWithPrimaryViewControllers:@[vc1, vc2, vc3] detailClassGeneral:[DetailViewController class] withNavigationController:secondaryWithNav detailClassEmpty:[EmptyDetailViewController class]];
     
     // setting up UIWindow
     if SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0"){

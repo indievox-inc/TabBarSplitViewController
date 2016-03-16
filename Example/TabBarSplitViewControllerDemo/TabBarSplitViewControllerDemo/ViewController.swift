@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let secondaryWithNav : Bool
+
+    init(secondaryWithNav: Bool) {
+        self.secondaryWithNav = secondaryWithNav
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let tag = navigationController?.tabBarItem.tag {
             switch tag {
-            case 0:
-                title = "Featured"
             case 1:
-                title = "Search"
+                title = "Featured"
             case 2:
+                title = "Search"
+            case 3:
                 title = "Favorites"
             default:
                 break
@@ -28,21 +39,20 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.whiteColor()
 
         let redButton = UIButton(type: .System)
-        redButton.setTitle("Red", forState: .Normal)
+        redButton.setTitle("Red (showViewController)", forState: .Normal)
         redButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         redButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         redButton.addTarget(self, action: "showRed:", forControlEvents: .TouchUpInside)
         let blueButton = UIButton(type: .System)
-        blueButton.setTitle("Blue", forState: .Normal)
+        blueButton.setTitle("Blue (showDetailViewController)", forState: .Normal)
         blueButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
         blueButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         blueButton.addTarget(self, action: "showBlue:", forControlEvents: .TouchUpInside)
         let greenButton = UIButton(type: .System)
-        greenButton.setTitle("Green", forState: .Normal)
+        greenButton.setTitle("Green (showDetailViewController)", forState: .Normal)
         greenButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
         greenButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         greenButton.addTarget(self, action: "showGreen:", forControlEvents: .TouchUpInside)
-
         redButton.translatesAutoresizingMaskIntoConstraints = false
         blueButton.translatesAutoresizingMaskIntoConstraints = false
         greenButton.translatesAutoresizingMaskIntoConstraints = false
@@ -68,25 +78,41 @@ class ViewController: UIViewController {
     // MARK: Actions
 
     func showRed(sender: UIButton) {
-        let vc = UIViewController()
-        vc.view.backgroundColor = UIColor(red: 0.8, green: 0, blue: 0, alpha: 1.0)
+        let vc = ViewController(secondaryWithNav: secondaryWithNav)
+        vc.title = "Red"
+        vc.view.backgroundColor = UIColor(red: 0.5, green: 0, blue: 0, alpha: 1.0)
         showViewController(vc, sender: self)
     }
 
     func showBlue(sender: UIButton) {
-        let vc = DetailViewController()
-        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0.8, alpha: 1.0)
-        showDetailViewController(vc, sender: self)
+        let vc = DetailViewController(secondaryWithNav: secondaryWithNav)
+        vc.title = "Blue"
+        vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0.5, alpha: 1.0)
+        switch secondaryWithNav {
+        case true:
+            let nav = UINavigationController(rootViewController: vc)
+            showDetailViewController(nav, sender: self)
+        case false:
+            showDetailViewController(vc, sender: self)
+        }
     }
 
     func showGreen(sender: UIButton) {
-        let vc = DetailViewController()
-        vc.view.backgroundColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1.0)
-        showDetailViewController(vc, sender: self)
+        let vc = DetailViewController(secondaryWithNav: secondaryWithNav)
+        vc.title = "Green"
+        vc.view.backgroundColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1.0)
+        switch secondaryWithNav {
+        case true:
+            let nav = UINavigationController(rootViewController: vc)
+            showDetailViewController(nav, sender: self)
+        case false:
+            showDetailViewController(vc, sender: self)
+        }
     }
 }
 
 class EmptyDetailViewController : UIViewController {
+
     override func loadView() {
         let view = UIView()
         view.backgroundColor = UIColor.darkGrayColor()
@@ -108,5 +134,5 @@ class EmptyDetailViewController : UIViewController {
     }
 }
 
-class DetailViewController : UIViewController {
+class DetailViewController : ViewController {
 }

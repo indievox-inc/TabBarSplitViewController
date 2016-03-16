@@ -17,20 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
-        let tab1 = UITabBarItem(tabBarSystemItem: .Featured, tag: 0)
-        let vc1 = UINavigationController(rootViewController: ViewController())
+        let secondaryWithNav = false
+
+        let tab1 = UITabBarItem(tabBarSystemItem: .Featured, tag: 1)
+        let vc1 = UINavigationController(rootViewController: ViewController(secondaryWithNav: secondaryWithNav))
         vc1.tabBarItem = tab1
 
-        let tab2 = UITabBarItem(tabBarSystemItem: .Search, tag: 1)
-        let vc2 = UINavigationController(rootViewController: ViewController())
+        let tab2 = UITabBarItem(tabBarSystemItem: .Search, tag: 2)
+        let vc2 = UINavigationController(rootViewController: ViewController(secondaryWithNav: secondaryWithNav))
         vc2.tabBarItem = tab2
 
-        let tab3 = UITabBarItem(tabBarSystemItem: .Favorites, tag: 2)
-        let vc3 = UINavigationController(rootViewController: ViewController())
+        let tab3 = UITabBarItem(tabBarSystemItem: .Favorites, tag: 3)
+        let vc3 = UINavigationController(rootViewController: ViewController(secondaryWithNav: secondaryWithNav))
         vc3.tabBarItem = tab3
 
-        let tabBarSplitViewController = TabBarSplitViewController(tabBarViewControllers: [vc1, vc2, vc3],
-            detailViewControllerType: (DetailViewController.self, EmptyDetailViewController.self))
+        let tabBarSplitViewController = TabBarSplitViewController(primaryViewControllers: [vc1, vc2, vc3], SecondaryViewControllerConfiguration: (DetailViewController.self, secondaryWithNav, EmptyDetailViewController.self))
 
         // setting up UIWindow
         let window : UIWindow

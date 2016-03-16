@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (instancetype)initWithSecondaryWithNav:(BOOL)secondaryWithNav NS_DESIGNATED_INITIALIZER;
 @end
 
 @interface EmptyDetailViewController : UIViewController
 @end
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : ViewController
 @end

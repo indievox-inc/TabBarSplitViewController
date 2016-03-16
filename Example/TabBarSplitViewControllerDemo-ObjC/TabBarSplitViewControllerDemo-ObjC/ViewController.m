@@ -10,22 +10,41 @@
 
 @interface ViewController ()
 
+@property (nonatomic, assign) BOOL secondaryWithNav;
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 @end
 
 @implementation ViewController
+
+- (instancetype)initWithSecondaryWithNav:(BOOL)secondaryWithNav {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        self.secondaryWithNav = secondaryWithNav;
+    }
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    return [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [super initWithCoder:aDecoder];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     NSInteger tag = self.navigationController.tabBarItem.tag;
     switch (tag) {
-        case 0:
+        case 1:
             self.title = @"Featured";
             break;
-        case 1:
+        case 2:
             self.title = @"Search";
             break;
-        case 2:
+        case 3:
             self.title = @"Favorites";
             break;
         default:
@@ -34,17 +53,17 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     UIButton *redButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [redButton setTitle:@"Red" forState:UIControlStateNormal];
+    [redButton setTitle:@"Red (showViewController)" forState:UIControlStateNormal];
     [redButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     redButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     [redButton addTarget:self action:@selector(showRed:) forControlEvents:UIControlEventTouchUpInside];
     UIButton *blueButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [blueButton setTitle:@"Blue" forState:UIControlStateNormal];
+    [blueButton setTitle:@"Blue (showDetailViewController)" forState:UIControlStateNormal];
     [blueButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     blueButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     [blueButton addTarget:self action:@selector(showBlue:) forControlEvents:UIControlEventTouchUpInside];
     UIButton *greenButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [greenButton setTitle:@"Green" forState:UIControlStateNormal];
+    [greenButton setTitle:@"Green (showDetailViewController)" forState:UIControlStateNormal];
     [greenButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     greenButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     [greenButton addTarget:self action:@selector(showGreen:) forControlEvents:UIControlEventTouchUpInside];
@@ -78,21 +97,34 @@
 #pragma mark Actions
 
 - (void)showRed:(UIButton*)sender {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:0.8 green:0 blue:0 alpha:1.0];
+    UIViewController *vc = [[ViewController alloc] init];
+    vc.title = @"Red";
+    vc.view.backgroundColor = [UIColor colorWithRed:0.5 green:0 blue:0 alpha:1.0];
     [self showViewController:vc sender:self];
 }
 
 - (void)showBlue:(UIButton*)sender {
     UIViewController *vc = [[DetailViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.8 alpha:1.0];
-    [self showDetailViewController:vc sender:self];
+    vc.title = @"Blue";
+    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0.5 alpha:1.0];
+    if (self.secondaryWithNav) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self showDetailViewController:nav sender:self];
+    } else {
+        [self showDetailViewController:vc sender:self];
+    }
 }
 
 - (void)showGreen:(UIButton*)sender {
     UIViewController *vc = [[DetailViewController alloc] init];
-    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0.8 blue:0 alpha:1.0];
-    [self showDetailViewController:vc sender:self];
+    vc.title = @"Green";
+    vc.view.backgroundColor = [UIColor colorWithRed:0 green:0.5 blue:0 alpha:1.0];
+    if (self.secondaryWithNav) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self showDetailViewController:nav sender:self];
+    } else {
+        [self showDetailViewController:vc sender:self];
+    }
 }
 
 @end
