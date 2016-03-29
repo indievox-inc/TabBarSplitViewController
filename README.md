@@ -1,5 +1,7 @@
 # TabBarSplitViewController
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Adaptive UISplitViewController that works with UITabBarController as primary view controller.
 
 ![TabBarSplitViewController Example screenshot in iPad](https://cloud.githubusercontent.com/assets/2727287/13274879/efb9f8f2-dae9-11e5-8510-f683d4381fe0.PNG)
@@ -22,9 +24,9 @@ UISplitViewController (master-detail interface) becomes universal for both iPad 
 | Secondary empty state | YES (Customizable) | No (should start with nil) |
 
 
-## Requirements 
+## Requirements
 
-iOS 8 or later. 
+iOS 8 or later.
 
 ## Add to Your Project
 
