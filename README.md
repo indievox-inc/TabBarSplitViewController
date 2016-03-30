@@ -1,6 +1,7 @@
 # TabBarSplitViewController
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 Adaptive UISplitViewController that works with UITabBarController as primary view controller.
 
@@ -31,6 +32,17 @@ iOS 8 or later.
 ## Add to Your Project
 
 ### Cocoapods
+
+#### Podfile
+
+In light of [this discussion](https://github.com/CocoaPods/CocoaPods/issues/4989#issuecomment-193772935), we encourage this form:
+
+```
+pod 'TabBarSplitViewController', :git => 'https://github.com/indievox-inc/TabBarSplitViewController'
+use_frameworks!
+```
+
+Run `pod update`.
 
 ### Carthage
 
