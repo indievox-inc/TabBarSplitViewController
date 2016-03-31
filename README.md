@@ -1,26 +1,27 @@
 # TabBarSplitViewController
 
+[![Build Status](https://travis-ci.org/indievox-inc/TabBarSplitViewController.svg?branch=master)](https://travis-ci.org/indievox-inc/TabBarSplitViewController)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-Adaptive UISplitViewController that works with UITabBarController as primary view controller.
+Adaptive `UISplitViewController` that works with `UITabBarController` as primary view controller.
 
 ![TabBarSplitViewController Example screenshot in iPad](https://cloud.githubusercontent.com/assets/2727287/13274879/efb9f8f2-dae9-11e5-8510-f683d4381fe0.PNG)
 ![TabBarSplitViewController Example screenshot in iPhone 6 Plus simulator](https://cloud.githubusercontent.com/assets/2727287/13249103/3bc6a4ee-da5d-11e5-8d41-567a0946e29e.PNG)
 
 (Not what you're looking for? You may be looking for another UI structure: [daveanderson/TabsAndSplits](https://github.com/daveanderson/TabsAndSplits))
 
-If you're using UITabBarController/UINavigationController as rootViewController to build an iPhone-only app, there's NO REASON NOT TO BE AN UNIVERSAL APP ANYMORE!
+If you're using `UITabBarController` / `UINavigationController` as rootViewController to build an iPhone-only app, there's NO REASON NOT TO BE AN UNIVERSAL APP ANYMORE!
 
 Fully compatible with iOS 9 iPad multitasking (Slide Over/Split View)!
 
 ## Introduction
 
-UISplitViewController (master-detail interface) becomes universal for both iPad and iPhone, with introduction of size classes in iOS 8. However, UISplitViewController default behavior (without implementing UISplitViewControllerDelegate) is limited:
+`UISplitViewController` (master-detail interface) becomes universal for both iPad and iPhone, with introduction of size classes in iOS 8. However, `UISplitViewController` default behavior (without implementing `UISplitViewControllerDelegate`) is limited:
 
 |  | TabBarSplitViewController | UISplitViewController |
 | --- | --- | --- |
-| Primary use `UITabBarController` | YES (optional) | No (UINavigationController suggested) |
+| Primary use `UITabBarController` | YES (optional) | No (`UINavigationController` suggested) |
 | Secondary use `UINavigationController` | YES (optional) | No |
 | Secondary empty state | YES (Customizable) | No (should start with nil) |
 
@@ -56,21 +57,23 @@ Follow instructions on [Carthage](https://github.com/Carthage/Carthage).
 ### Git Submodule
 
 Add as submodule and clone:
+
 ```
 git submodule add https://github.com/indievox-inc/TabBarSplitViewController
 ```
+
 Then manually add to your project, as follows:
 
 ### Manually
 
 #### Dependency Project
 
-1. Drag TabBarSplitViewController.xcodeproj into your project.
-2. Project settings - Targets - General - Embedded Binaries: add TabBarSplitViewController.frameworkiOS
+1. Drag `TabBarSplitViewController.xcodeproj` into your project.
+2. Project settings - Targets - General - Embedded Binaries: add `TabBarSplitViewController.frameworkiOS`
 
 #### Source Code
 
-Or just drag TabBarSplitViewController.swift into your project.
+Or just drag `TabBarSplitViewController.swift` into your project.
 
 ## How to Use
 
@@ -84,7 +87,7 @@ For Objective-C projects, `#import "TabBarSplitViewController/TabBarSplitViewCon
 
 Set it as windows's rootViewController.
 
-All view controllers of the tabBarViewController should be UINavigationController, with respective view controller of each tab as its rootViewController.
+All view controllers of the tabBarViewController should be `UINavigationController`, with respective view controller of each tab as its rootViewController.
 
 ### Test Your Navigation Flow
 
@@ -98,7 +101,7 @@ Further reading: [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](http
 
 This project powers [LiVE EVIL](https://itunes.apple.com/app/id1075717681?mt=8) app of iNDIEVOX Inc., and is planned to be maintained with the latest Swift and Xcode version.
 
-If you prefer Objective-C to avoid dependency hell of fast-moving Swift version (See: [Is It Time for Swift?](https://realm.io/news/ben-sandofsky-time-for-swift)), or if you're using customized view for tab bar, port the source code and build your own should be easy now.
+If you prefer Objective-C to avoid dependency hell of fast-moving Swift version (See: [Is It Time for Swift?](https://realm.io/news/ben-sandofsky-time-for-swift)), or if you're using customized view for tab bar, port the source code and build your own should be easy now, by referencing [the original implementation](https://github.com/indievox-inc/TabBarSplitViewController/blob/59957600bdeb7bd985e3173601474220ba3083a8/TabBarSplitViewController/TabBarSplitViewController.swift).
 
 There are one UI logic flaw in this UI structure, though not a big concern:
 
