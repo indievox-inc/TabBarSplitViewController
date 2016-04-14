@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAC1573C1CBFA7C000DD799C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1573B1CBFA7C000DD799C /* AppDelegate.swift */; };
+		EAC1573E1CBFA7C000DD799C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1573D1CBFA7C000DD799C /* ViewController.swift */; };
+		EAC157411CBFA7C000DD799C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC1573F1CBFA7C000DD799C /* Main.storyboard */; };
+		EAC157431CBFA7C000DD799C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC157421CBFA7C000DD799C /* Assets.xcassets */; };
+		EAC157461CBFA7C000DD799C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC157441CBFA7C000DD799C /* LaunchScreen.storyboard */; };
+		EAC1574E1CBFA81500DD799C /* TabBarSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC1574D1CBFA81500DD799C /* TabBarSplitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EAC157381CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBarSplitViewControllerDemo-Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC1573B1CBFA7C000DD799C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EAC1573D1CBFA7C000DD799C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EAC157401CBFA7C000DD799C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAC157421CBFA7C000DD799C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAC157451CBFA7C000DD799C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAC157471CBFA7C000DD799C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAC1574D1CBFA81500DD799C /* TabBarSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarSplitViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAC157351CBFA7C000DD799C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAC1572F1CBFA7C000DD799C = {
+			isa = PBXGroup;
+			children = (
+				EAC1573A1CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard */,
+				EAC157391CBFA7C000DD799C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAC157391CBFA7C000DD799C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAC157381CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAC1573A1CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EAC1573B1CBFA7C000DD799C /* AppDelegate.swift */,
+				EAC1574D1CBFA81500DD799C /* TabBarSplitViewController.swift */,
+				EAC1573D1CBFA7C000DD799C /* ViewController.swift */,
+				EAC1573F1CBFA7C000DD799C /* Main.storyboard */,
+				EAC157421CBFA7C000DD799C /* Assets.xcassets */,
+				EAC157441CBFA7C000DD799C /* LaunchScreen.storyboard */,
+				EAC157471CBFA7C000DD799C /* Info.plist */,
+			);
+			path = "TabBarSplitViewControllerDemo-Storyboard";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAC157371CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAC1574A1CBFA7C000DD799C /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-Storyboard" */;
+			buildPhases = (
+				EAC157341CBFA7C000DD799C /* Sources */,
+				EAC157351CBFA7C000DD799C /* Frameworks */,
+				EAC157361CBFA7C000DD799C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TabBarSplitViewControllerDemo-Storyboard";
+			productName = "TabBarSplitViewControllerDemo-Storyboard";
+			productReference = EAC157381CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAC157301CBFA7C000DD799C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = indievox;
+				TargetAttributes = {
+					EAC157371CBFA7C000DD799C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = EAC157331CBFA7C000DD799C /* Build configuration list for PBXProject "TabBarSplitViewControllerDemo-Storyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAC1572F1CBFA7C000DD799C;
+			productRefGroup = EAC157391CBFA7C000DD799C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAC157371CBFA7C000DD799C /* TabBarSplitViewControllerDemo-Storyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAC157361CBFA7C000DD799C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC157461CBFA7C000DD799C /* LaunchScreen.storyboard in Resources */,
+				EAC157431CBFA7C000DD799C /* Assets.xcassets in Resources */,
+				EAC157411CBFA7C000DD799C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAC157341CBFA7C000DD799C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC1574E1CBFA81500DD799C /* TabBarSplitViewController.swift in Sources */,
+				EAC1573E1CBFA7C000DD799C /* ViewController.swift in Sources */,
+				EAC1573C1CBFA7C000DD799C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EAC1573F1CBFA7C000DD799C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC157401CBFA7C000DD799C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAC157441CBFA7C000DD799C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAC157451CBFA7C000DD799C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAC157481CBFA7C000DD799C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAC157491CBFA7C000DD799C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAC1574B1CBFA7C000DD799C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-Storyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-Storyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAC1574C1CBFA7C000DD799C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TabBarSplitViewControllerDemo-Storyboard/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.indievox.TabBarSplitViewControllerDemo-Storyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAC157331CBFA7C000DD799C /* Build configuration list for PBXProject "TabBarSplitViewControllerDemo-Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC157481CBFA7C000DD799C /* Debug */,
+				EAC157491CBFA7C000DD799C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAC1574A1CBFA7C000DD799C /* Build configuration list for PBXNativeTarget "TabBarSplitViewControllerDemo-Storyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC1574B1CBFA7C000DD799C /* Debug */,
+				EAC1574C1CBFA7C000DD799C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAC157301CBFA7C000DD799C /* Project object */;
+}
