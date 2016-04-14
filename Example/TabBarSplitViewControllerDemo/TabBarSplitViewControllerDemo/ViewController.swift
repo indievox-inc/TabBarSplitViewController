@@ -42,17 +42,17 @@ class ViewController: UIViewController {
         redButton.setTitle("Red (showViewController)", forState: .Normal)
         redButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         redButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        redButton.addTarget(self, action: "showRed:", forControlEvents: .TouchUpInside)
+        redButton.addTarget(self, action: #selector(showRed), forControlEvents: .TouchUpInside)
         let blueButton = UIButton(type: .System)
         blueButton.setTitle("Blue (showDetailViewController)", forState: .Normal)
         blueButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
         blueButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        blueButton.addTarget(self, action: "showBlue:", forControlEvents: .TouchUpInside)
+        blueButton.addTarget(self, action: #selector(showBlue), forControlEvents: .TouchUpInside)
         let greenButton = UIButton(type: .System)
         greenButton.setTitle("Green (showDetailViewController)", forState: .Normal)
         greenButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
         greenButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        greenButton.addTarget(self, action: "showGreen:", forControlEvents: .TouchUpInside)
+        greenButton.addTarget(self, action: #selector(showGreen), forControlEvents: .TouchUpInside)
         redButton.translatesAutoresizingMaskIntoConstraints = false
         blueButton.translatesAutoresizingMaskIntoConstraints = false
         greenButton.translatesAutoresizingMaskIntoConstraints = false
