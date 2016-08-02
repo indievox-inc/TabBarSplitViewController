@@ -28,7 +28,7 @@ Fully compatible with iOS 9 iPad multitasking (Slide Over/Split View)!
 
 ## Requirements
 
-iOS 8 or later.
+iOS 8 or later
 
 ## Add to Your Project
 
