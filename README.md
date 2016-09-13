@@ -99,7 +99,7 @@ Further reading: [WWDC 2014 Session 216: Building Adaptive Apps with UIKit](http
 
 ## Afterword
 
-This project powers [LiVE EVIL](https://itunes.apple.com/app/id1075717681?mt=8) app of iNDIEVOX Inc., and is planned to be maintained with the latest Swift and Xcode version.
+This project powered [LiVE EVIL](http://appshopper.com/lifestyle/live-evil-%E7%8F%BE%E5%A0%B4%E4%B8%80%E7%99%BC-%E9%9F%B3%E6%A8%82%E6%B4%BB%E5%8B%95%E8%B3%87%E8%A8%8A%E3%80%81%E6%BC%94%E5%94%B1%E6%9C%83%E8%B3%BC%E7%A5%A8%E3%80%81live-house-%E8%88%87%E9%9F%B3) app of iNDIEVOX Inc., ~~and is planned to be maintained with the latest Swift and Xcode version.~~ is written in Swift 2.2, and will not be maintained in this repository anymore. Please check other forked repositories.
 
 If you prefer Objective-C to avoid dependency hell of fast-moving Swift version (See: [Is It Time for Swift?](https://realm.io/news/ben-sandofsky-time-for-swift)), or if you're using customized view for tab bar, port the source code and build your own should be easy now, by referencing [the original implementation](https://github.com/indievox-inc/TabBarSplitViewController/blob/59957600bdeb7bd985e3173601474220ba3083a8/TabBarSplitViewController/TabBarSplitViewController.swift).
 
