@@ -62,7 +62,7 @@ extension UIViewController : SecondaryViewControllerProtocol {
         return [self]
     }
 
-    static func secondaryViewControllerToExpand(viewControllers: [UIViewController]) -> UIViewController? {
+    static func secondaryViewControllerToExpand(_ viewControllers: [UIViewController]) -> UIViewController? {
         if self === UINavigationController.self {
             let navigationController = UINavigationController()
             navigationController.setViewControllers(viewControllers, animated: false)
@@ -145,13 +145,13 @@ protocol PrimaryViewControllerProtocol {
 protocol SecondaryViewControllerProtocol {
     func viewControllersToCollapse() -> [UIViewController]?
     /// SecondaryViewController factory method
-    static func secondaryViewControllerToExpand(viewControllers: [UIViewController]) -> UIViewController?
+    static func secondaryViewControllerToExpand(_ viewControllers: [UIViewController]) -> UIViewController?
 }
 
 // MARK: TabBarSplitViewController
 
 @available(iOS 8.0, *)
-public class TabBarSplitViewController: UISplitViewController {
+open class TabBarSplitViewController: UISplitViewController {
 
     let SecondaryViewControllerType : SecondaryViewControllerProtocol.Type
     let SecondaryInsideViewControllerTypes : (General: UIViewController.Type, Empty: UIViewController.Type)
@@ -169,7 +169,7 @@ public class TabBarSplitViewController: UISplitViewController {
             viewControllers = [primaryViewController, secondaryViewController]
         }
 
-        preferredDisplayMode = .AllVisible
+        preferredDisplayMode = .allVisible
         delegate = self
     }
 
@@ -182,14 +182,14 @@ public class TabBarSplitViewController: UISplitViewController {
 extension TabBarSplitViewController: UISplitViewControllerDelegate {
 
     // MARK: to Compact Width size class (collapse)
-    public func primaryViewControllerForCollapsingSplitViewController(splitViewController: UISplitViewController) -> UIViewController? {
+    public func primaryViewController(forCollapsing splitViewController: UISplitViewController) -> UIViewController? {
         if let primaryViewController = splitViewController.viewControllers[0] as? PrimaryViewControllerProtocol,
-            primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController() {
+            let primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController() {
                 let secondaryViewController = splitViewController.viewControllers[1]
                 if let viewControllersToCollapse = secondaryViewController.viewControllersToCollapse() {
                     var vcsToCollapse = [UIViewController]()
                     for viewControllerToCollapse in viewControllersToCollapse {
-                        if (viewControllerToCollapse.dynamicType === SecondaryInsideViewControllerTypes.Empty) {
+                        if (type(of: viewControllerToCollapse) === SecondaryInsideViewControllerTypes.Empty) {
                             break
                         }
                         vcsToCollapse.append(viewControllerToCollapse)
@@ -199,7 +199,7 @@ extension TabBarSplitViewController: UISplitViewControllerDelegate {
                         viewControllers.removeLast()
                     }
                     viewControllers += vcsToCollapse
-                    dispatch_async(dispatch_get_main_queue()) {     // otherwise we may get console error "<Error>: CGImageCreate: invalid image size: 0 x 0."
+                    DispatchQueue.main.async {     // otherwise we may get console error "<Error>: CGImageCreate: invalid image size: 0 x 0."
                         primaryInsideViewController.setViewControllers(viewControllers, animated: false)
                     }
                     if let primaryViewController = primaryViewController as? UIViewController {
@@ -210,27 +210,27 @@ extension TabBarSplitViewController: UISplitViewControllerDelegate {
         return nil
     }
 
-    public func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+    public func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
 
     // MARK: to Regular Width size class (separate/expand)
 
-    public func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController) -> UIViewController? {
+    public func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
         if let primaryViewController = splitViewController.viewControllers[0] as? PrimaryViewControllerProtocol,
-         primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController(),
-            viewControllersToExpand = primaryViewController.viewControllersToExpand() {
+         let primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController(),
+            let viewControllersToExpand = primaryViewController.viewControllersToExpand() {
                 var vcsToExpand = [UIViewController]()
-                for viewControllerToExpand in viewControllersToExpand.reverse() {   // reverse: check from top view controller
-                    if viewControllerToExpand.dynamicType === SecondaryInsideViewControllerTypes.General {
-                        primaryInsideViewController.popViewControllerAnimated(false)
+                for viewControllerToExpand in viewControllersToExpand.reversed() {   // reverse: check from top view controller
+                    if type(of: viewControllerToExpand) === SecondaryInsideViewControllerTypes.General {
+                        primaryInsideViewController.popViewController(animated: false)
                         vcsToExpand.append(viewControllerToExpand)
                     } else {
                         break
                     }
                 }
                 if vcsToExpand.count > 0 {
-                    let secondaryViewController = SecondaryViewControllerType.secondaryViewControllerToExpand(vcsToExpand.reverse()) // reverse: show from bottom to top view controller
+                    let secondaryViewController = SecondaryViewControllerType.secondaryViewControllerToExpand(vcsToExpand.reversed()) // reverse: show from bottom to top view controller
                     return secondaryViewController
                 }
         }
@@ -238,20 +238,20 @@ extension TabBarSplitViewController: UISplitViewControllerDelegate {
         return SecondaryInsideViewControllerTypes.Empty.init()
     }
 
-    public func primaryViewControllerForExpandingSplitViewController(splitViewController: UISplitViewController) -> UIViewController? {
+    public func primaryViewController(forExpanding splitViewController: UISplitViewController) -> UIViewController? {
         return nil
     }
 
     // MARK: override showDetailViewController
-    public func splitViewController(splitViewController: UISplitViewController, showDetailViewController vc: UIViewController, sender: AnyObject?) -> Bool {
-        let isCompactWidth = (splitViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Compact)
+    public func splitViewController(_ splitViewController: UISplitViewController, showDetail vc: UIViewController, sender: Any?) -> Bool {
+        let isCompactWidth = (splitViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact)
         if isCompactWidth {
             if let primaryViewController = splitViewController.viewControllers[0] as? PrimaryViewControllerProtocol,
-                primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController() {
-                    if let _ = SecondaryViewControllerType as? UINavigationController.Type, vc = vc as? UINavigationController, topViewController = vc.topViewController {
-                            primaryInsideViewController.showViewController(topViewController, sender: self)
+                let primaryInsideViewController = primaryViewController.collapsedToPrimaryViewController() {
+                    if let _ = SecondaryViewControllerType as? UINavigationController.Type, let vc = vc as? UINavigationController, let topViewController = vc.topViewController {
+                            primaryInsideViewController.show(topViewController, sender: self)
                     } else {
-                        primaryInsideViewController.showViewController(vc, sender: self)
+                        primaryInsideViewController.show(vc, sender: self)
                     }
                     return true
             }
