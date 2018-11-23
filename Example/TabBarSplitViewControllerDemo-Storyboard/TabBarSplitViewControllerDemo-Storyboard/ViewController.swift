@@ -37,23 +37,23 @@ class ViewController: UIViewController {
                 break
             }
         }
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = .white
 
-        let redButton = UIButton(type: .System)
-        redButton.setTitle("Red (showViewController)", forState: .Normal)
-        redButton.setTitleColor(UIColor.redColor(), forState: .Normal)
-        redButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        redButton.addTarget(self, action: #selector(showRed), forControlEvents: .TouchUpInside)
-        let blueButton = UIButton(type: .System)
-        blueButton.setTitle("Blue (showDetailViewController)", forState: .Normal)
-        blueButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
-        blueButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        blueButton.addTarget(self, action: #selector(showBlue), forControlEvents: .TouchUpInside)
-        let greenButton = UIButton(type: .System)
-        greenButton.setTitle("Green (showDetailViewController)", forState: .Normal)
-        greenButton.setTitleColor(UIColor.greenColor(), forState: .Normal)
-        greenButton.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        greenButton.addTarget(self, action: #selector(showGreen), forControlEvents: .TouchUpInside)
+        let redButton = UIButton(type: .system)
+        redButton.setTitle("Red (showViewController)", for: .normal)
+        redButton.setTitleColor(.red, for: .normal)
+        redButton.titleLabel?.font = .preferredFont(forTextStyle: .headline)
+        redButton.addTarget(self, action: #selector(showRed), for: .touchUpInside)
+        let blueButton = UIButton(type: .system)
+        blueButton.setTitle("Blue (showDetailViewController)", for: .normal)
+        blueButton.setTitleColor(.blue, for: .normal)
+        blueButton.titleLabel?.font = .preferredFont(forTextStyle: .headline)
+        blueButton.addTarget(self, action: #selector(showBlue), for: .touchUpInside)
+        let greenButton = UIButton(type: .system)
+        greenButton.setTitle("Green (showDetailViewController)", for: .normal)
+        greenButton.setTitleColor(.green, for: .normal)
+        greenButton.titleLabel?.font = .preferredFont(forTextStyle: .headline)
+        greenButton.addTarget(self, action: #selector(showGreen), for: .touchUpInside)
         redButton.translatesAutoresizingMaskIntoConstraints = false
         blueButton.translatesAutoresizingMaskIntoConstraints = false
         greenButton.translatesAutoresizingMaskIntoConstraints = false
@@ -63,12 +63,12 @@ class ViewController: UIViewController {
 
         var constraints = [NSLayoutConstraint]()
         let viewsDict = ["redButton": redButton, "blueButton": blueButton, "greenButton": greenButton]
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:[redButton]-30-[blueButton]-30-[greenButton]", options: .DirectionLeadingToTrailing, metrics: nil, views: viewsDict)
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[redButton]|", options: .AlignAllTop, metrics: nil, views: viewsDict)
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[blueButton]|", options: .AlignAllTop, metrics: nil, views: viewsDict)
-        constraints += NSLayoutConstraint.constraintsWithVisualFormat("H:|[greenButton]|", options: .AlignAllTop, metrics: nil, views: viewsDict)
-        constraints.append(NSLayoutConstraint(item: blueButton, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1.0, constant: 0))
-        NSLayoutConstraint.activateConstraints(constraints)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[redButton]-30-[blueButton]-30-[greenButton]", options: .directionLeadingToTrailing, metrics: nil, views: viewsDict)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[redButton]|", options: .alignAllTop, metrics: nil, views: viewsDict)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[blueButton]|", options: .alignAllTop, metrics: nil, views: viewsDict)
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[greenButton]|", options: .alignAllTop, metrics: nil, views: viewsDict)
+        constraints.append(NSLayoutConstraint(item: blueButton, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.0, constant: 0))
+        NSLayoutConstraint.activate(constraints)
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,14 +78,14 @@ class ViewController: UIViewController {
 
     // MARK: Actions
 
-    func showRed(sender: UIButton) {
+    @objc func showRed(_ sender: UIButton) {
         let vc = ViewController(secondaryWithNav: secondaryWithNav)
         vc.title = "Red"
         vc.view.backgroundColor = UIColor(red: 0.5, green: 0, blue: 0, alpha: 1.0)
-        showViewController(vc, sender: self)
+        show(vc, sender: self)
     }
 
-    func showBlue(sender: UIButton) {
+    @objc func showBlue(_ sender: UIButton) {
         let vc = DetailViewController(secondaryWithNav: secondaryWithNav)
         vc.title = "Blue"
         vc.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0.5, alpha: 1.0)
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func showGreen(sender: UIButton) {
+    @objc func showGreen(_ sender: UIButton) {
         let vc = DetailViewController(secondaryWithNav: secondaryWithNav)
         vc.title = "Green"
         vc.view.backgroundColor = UIColor(red: 0, green: 0.5, blue: 0, alpha: 1.0)
@@ -116,20 +116,20 @@ class EmptyDetailViewController : UIViewController {
 
     override func loadView() {
         let view = UIView()
-        view.backgroundColor = UIColor.darkGrayColor()
+        view.backgroundColor = .darkGray
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("not selected", comment: "not selected")
         label.textColor = UIColor(white: 1.0, alpha: 0.4)
-        label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        label.font = .preferredFont(forTextStyle: .headline)
         view.addSubview(label)
         
-        let xConstraint = NSLayoutConstraint(item: label, attribute: .CenterX, relatedBy: .Equal, toItem: view,
-            attribute: .CenterX, multiplier: 1.0, constant: 0)
-        let yConstraint = NSLayoutConstraint(item: label, attribute: .CenterY, relatedBy: .Equal, toItem: view,
-            attribute: .CenterY, multiplier: 1.0, constant: 0)
-        NSLayoutConstraint.activateConstraints([xConstraint, yConstraint])
+        let xConstraint = NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: view,
+            attribute: .centerX, multiplier: 1.0, constant: 0)
+        let yConstraint = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: view,
+            attribute: .centerY, multiplier: 1.0, constant: 0)
+        NSLayoutConstraint.activate([xConstraint, yConstraint])
         
         self.view = view
     }
